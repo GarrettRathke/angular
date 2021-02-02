@@ -1,5 +1,15 @@
-<h1>{{title}}</h1>
-<app-coffees></app-coffees>
+<div class="header_row">
+    <div class="header_left">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="header_middle">
+        <app-db-connection-status></app-db-connection-status>
+    </div>
+    <div class="header_right">
+        <span>help link</span>
+    </div>
+</div>
+
 
 
 <router-outlet></router-outlet>
