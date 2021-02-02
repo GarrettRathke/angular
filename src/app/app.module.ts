@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { CoffeesComponent } from './coffees/coffees.component';
 import { FormsModule } from '@angular/forms';
 import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
-import { DbConnectionStatusComponent } from './db-connection-status/db-connection-status.component'; // gives access to NgModel
+import { DbConnectionStatusComponent } from './db-connection-status/db-connection-status.component';
+import { HelpComponent } from './help/help.component'; // gives access to NgModel
 
 @NgModule({
   declarations: [
     AppComponent,
     CoffeesComponent,
     CoffeeDetailComponent,
-    DbConnectionStatusComponent
+    DbConnectionStatusComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

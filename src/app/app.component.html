@@ -1,3 +1,4 @@
+<!-- BANNER -->
 <div class="header_row">
     <div class="header_left">
         <h1>{{title}}</h1>
@@ -6,10 +7,14 @@
         <app-db-connection-status></app-db-connection-status>
     </div>
     <div class="header_right">
-        <span>help link</span>
+        <a routerLink="/help-component" routerLinkActive="active">Help</a>
     </div>
 </div>
 
+<!-- TODO: 
+    1.) add tab feature w/ routing to different views (coffees, sandwiches, desserts)
+    2.) make a simple form for ordering coffees, sandwiches, and desserts
+-->
 
 
 <router-outlet></router-outlet>
