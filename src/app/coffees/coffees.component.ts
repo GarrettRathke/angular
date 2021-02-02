@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Coffee } from 'src/app/coffee';
+import { Coffee } from '../coffee';
+import { COFFEES } from '../mock-coffees';
 
 @Component({
   selector: 'app-coffees',
@@ -8,14 +9,19 @@ import { Coffee } from 'src/app/coffee';
 })
 export class CoffeesComponent implements OnInit {
 
-  coffee: Coffee = {
-    id: 1,
-    name: 'Mocha'
-  };
+  coffees = COFFEES;
+  selectedCoffee: Coffee;
 
-  constructor() { }
+  constructor() {
+    this.selectedCoffee = this.coffees[0];
+   }
 
   ngOnInit(): void {
+  }
+
+  onSelect(coffee: Coffee): void {
+    this.selectedCoffee = coffee;
+    //window.alert("selected coffee: " + this.selectedCoffee.name);
   }
 
 }

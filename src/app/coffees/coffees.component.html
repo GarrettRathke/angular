@@ -1,7 +1,10 @@
-<h2>{{coffee.name | uppercase}} Details</h2>
-<div><span>id: </span>{{coffee.id}}</div>
-<div>
-    <label>name: 
-        <input [(ngModel)]="coffee.name" placeholder="name" />
-    </label>
-</div>
+<h2>Coffees</h2>
+<ul class="coffees">
+    <li *ngFor="let coffee of coffees"
+        [class.selected]="coffee === selectedCoffee"
+        (click)="onSelect(coffee)">
+        {{coffee.name}}
+    </li>
+</ul>
+
+<app-coffee-detail [coffee]="selectedCoffee"></app-coffee-detail>
