@@ -13,3 +13,6 @@ This modular application structure makes for very nicely organized and maintaina
 
 <h3><bold>Other Features of an Angular2 Application</bold></h3>
 Angular2 is an opinionated framework that uses <u>Convention over Configuration</u>, meaing that the framework <em>just does things a certain way</em>. If you're not used to convention over configuration frameworks, that can be a <em>gotcha</em>. For instance, if you use Angular CLI to generate new applications, components, and other app parts, you'll quickly notice that it automagically puts these new pieces into folders and gives them names that you didn't create. And the project leverages that assumed file structure under the hood in the framework. You can manually define / change files / folders, but beware the framework consequences.
+
+<h3><bold>Examples of Angular2 Bells and Whistles in this practice app</bold></h3>
+There are custom pipes in the pipes folder of this app. The pipes are imported and declared in the app-module (global module), giving the entire app access to the pipe.

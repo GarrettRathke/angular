@@ -15,7 +15,7 @@ export class AppComponent {
     if(sender == "help") {
       this.showHelp = true;
       this.showTabs = false;
-    } else if(sender == "title") {
+    } else if(sender == "title" || sender == "goBackToMainContentFromHelp") {
       this.showHelp = false;
       this.showTabs = true;
     } else {

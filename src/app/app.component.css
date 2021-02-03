@@ -78,3 +78,8 @@ h1 {
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+  /* styles the "cafe" hyperlink to exit help view */
+  .goBackToMainContent{
+    float: left;
+    margin-right: 5px;
+  }
