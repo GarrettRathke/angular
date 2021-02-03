@@ -1,29 +1,18 @@
-A Practice Application for Learning Angular2
+<h1><bold>A Practice Application for Learning Angular2</bold></h1>
 
-# PracticeApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+<h3><bold>Basic Structure of an Angular2 Application</bold></h3>
+All Angular2 apps have <strong>Modules</strong> and <strong>Components</strong>, which, together, make up the basic structure of the app. 
 
-## Development server
+The <strong>Module</strong> is the largest piece of an Angular2 app. <strong>Components</strong> live inside of <strong>Modules</strong>. Modules are just a single TypeScript file (<em>.ts</em>). Components are a combination of a TypeScript file, an HTML file, a CSS file, and perhaps a test file. Angular2 lingo can be a bit sloppy when referring to Components because sometimes the aforementioned group of files together is called a Component and other times just the TypeScript file is the called the Component. In the latter case, the HTML file is referred to as the <strong>Template</strong>.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The <strong>Template</strong>, or HTML file, describes how to render the <strong>Component</strong>, or TypeScript file. That being the case, each Component / TypeScript file corresponds to one Template / HTML file. Component + Template = some section of the screen in an app. Angular2 Templates mix Angular code in with HTML to make use of the Component code. Templates' scopes are limited to their Components. 
 
-## Code scaffolding
+This modular application structure makes for very nicely organized and maintainable code. There are, of course, other pieces to an Angular2 app, but the most basic building blocks of any Angular2 app are <strong>Templates</strong>, <strong>Components</strong>, and <strong>Modules</strong>.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<h3><bold>Other Features of an Angular2 Application</bold></h3>
+Angular2 is an opinionated framework that uses <u>Convention over Configuration</u>, meaing that the framework <em>just does things a certain way</em>. If you're not used to convention over configuration frameworks, that can be a <em>gotcha</em>. For instance, if you use Angular CLI to generate new applications, components, and other app parts, you'll quickly notice that it automagically puts these new pieces into folders and gives them names that you didn't create. And the project leverages that assumed file structure under the hood in the framework. You can manually define / change files / folders, but beware the framework consequences.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h3><bold>Examples of Angular2 Bells and Whistles in this practice app</bold></h3>
+There are custom pipes in the pipes folder of this app. The pipes are imported and declared in the app-module (global module), giving the entire app access to the pipe.
