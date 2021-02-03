@@ -8,6 +8,9 @@
     </div>
     <div class="header_right">
         <a routerLink="" (click)="changeMainContent($event)" id="help">Help</a>
+        <div *ngIf="showHelp" class="goBackToMainContent">
+            <a routerLink="" (click)="changeMainContent($event)" id="goBackToMainContentFromHelp">Cafe</a>
+        </div>
     </div>
 </div>
   

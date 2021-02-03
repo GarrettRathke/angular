@@ -1,3 +1,9 @@
-<span>DB connection status: {{connection.status}}</span>
-<br/>
+<!-- dbBoolean is a custom pipe defined in the pipes folder and imported into the app.module,
+    thereby giving the entire app access to the pipe -->
+<p>DB connection status: 
+    <span [style.color]="connection.status ? 'green' : 'red'">
+        {{connection.status | dbBoolean}}
+    </span>
+</p>
+
 <span>DB connection string: {{connection.connection}}</span>
