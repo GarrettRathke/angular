@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // gives access to NgModel
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { CoffeesComponent } from './coffees/coffees.component';
-import { FormsModule } from '@angular/forms';
 import { CoffeeDetailComponent } from './coffee-detail/coffee-detail.component';
 import { DbConnectionStatusComponent } from './db-connection-status/db-connection-status.component';
-import { HelpComponent } from './help/help.component'; // gives access to NgModel
+import { HelpComponent } from './help/help.component';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { HelpComponent } from './help/help.component'; // gives access to NgMode
     CoffeesComponent,
     CoffeeDetailComponent,
     DbConnectionStatusComponent,
-    HelpComponent
+    HelpComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
