@@ -6,6 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -34,7 +35,9 @@ import { DBBooleanPipe } from './pipes/dbBoolean';
     FormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    // apparently this has to come after BrowserModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Coffee } from '../coffee';
-import { COFFEES } from '../mock-coffees';
 
 @Component({
   selector: 'app-coffee-detail',
@@ -9,10 +8,11 @@ import { COFFEES } from '../mock-coffees';
 })
 export class CoffeeDetailComponent implements OnInit {
 
-  @Input() coffee: Coffee;
+  @Input()
+  coffee!: Coffee;
 
   constructor() { 
-    this.coffee = COFFEES[0];
+    //this.coffee = COFFEES[0];
   }
 
   ngOnInit(): void {
